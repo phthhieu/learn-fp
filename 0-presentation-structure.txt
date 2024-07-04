@@ -1,0 +1,108 @@
+What is Lambda Calculus?
+Bullet Points:
+- Formal system for expressing computation
+- Based on function abstraction and application
+- Uses variable binding and substitution
+"It's foundational to functional programming languages."
+
+
+
+
+--
+Syntax of Lambda Calculus
+- Variables: x, y, z, ...
+- Abstractions: λx.e (functions)
+- Applications: (e1 e2) (function calls)
+
+Examples:
+Variable: x
+Abstraction: λx.x
+Application: (λx.x y)
+
+--
+Bound and Free Variables
+- Bound Variable: A variable that is defined within an abstraction
+- Free Variable: A variable that is not bound within an abstraction
+Examples:
+In λx.x, x is bound.
+In λx.y, y is free.
+
+--
+Reduction in Lambda Calculus
+- Alpha Reduction: Renaming bound variables
+- Beta Reduction: Applying functions to arguments
+Examples:
+Alpha: λx.x -> λy.y
+Beta: (λx.x y) -> y
+
+--
+Booleans in Lambda Calculus
+- True: λx.λy.x
+- False: λx.λy.y
+
+Code Example (JavaScript):
+const TRUE = x => y => x;
+const FALSE = x => y => y;
+
+--
+Conditional in Lambda Calculus
+- Use booleans to implement conditional logic
+
+Code Example (JavaScript):
+const IF = condition => trueBranch => falseBranch => condition(trueBranch)(falseBranch);
+
+--
+Numbers in Lambda Calculus
+Represented using Church numerals
+Zero: λf.λx.x
+One: λf.λx.f(x)
+Two: λf.λx.f(f(x))
+Code Example (JavaScript):
+const ZERO = f => x => x;
+const ONE = f => x => f(x);
+const TWO = f => x => f(f(x));
+
+--
+What is Eta Reduction?
+- Simplifying functions by removing redundant abstractions
+Rule: λx. (f x) ≡ f
+Example:
+λx. (f x) reduces to f
+
+
+--
+Combinators
+- Why need Z combinator, is it because of Applicative Order (Eager Evaluation)
+- In lambda calculus, combinators are lambda terms that do not have free variables. They are particularly interesting because they represent higher-order functions that can be used to express computation without relying on specific variables. Here are some common combinators in lambda calculus:
+
+Identity Combinator (I):
+I=λx.x
+
+The identity combinator simply returns its argument unchanged.
+
+Fixed-point Combinator (Y or Θ):
+The fixed-point combinator allows for the creation of recursive functions in lambda calculus. The Y combinator is defined as:
+Y=λf.(λx.f(xx))(λx.f(xx))
+It allows for recursion by applying a function to itself.
+
+Mockingbird Combinator (M):
+M=λf.ff
+The mockingbird combinator applies a function to itself.
+
+K Combinator:
+K=λxy.x
+The K combinator (also known as the Kestrel) takes two arguments and returns the first one, ignoring the second.
+
+S Combinator:
+S=λxyz.(xz)(yz)
+The S combinator (also known as the Starling) is used to apply two functions to the same argument.
+
+B Combinator:
+B=λxyz.x(yz)
+The B combinator (also known as the Bluebird) applies the first function to the result of applying the second function to the third argument.
+
+C Combinator:
+C=λxyz.xzy
+The C combinator (also known as the Cardinal) is used for flipping the order of the last two arguments.
+
+Z combinator & Trampoline technique + Apply to JS
