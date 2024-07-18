@@ -8,6 +8,8 @@ Bullet Points:
 
 
 
+
+
 --
 Syntax of Lambda Calculus
 - Variables: x, y, z, ...
@@ -19,6 +21,12 @@ Variable: x
 Abstraction: λx.x
 Application: (λx.x y)
 
+
+
+
+
+
+
 --
 Bound and Free Variables
 - Bound Variable: A variable that is defined within an abstraction
@@ -27,13 +35,23 @@ Examples:
 In λx.x, x is bound.
 In λx.y, y is free.
 
+In JS, x is local var, while y is captured from a closure.
+
+
+
+
+
+
 --
 Reduction in Lambda Calculus
 - Alpha Reduction: Renaming bound variables
 - Beta Reduction: Applying functions to arguments
+- Eta Reduction: Simplifying functions by removing redundant abstractions
+
 Examples:
 Alpha: λx.x -> λy.y
 Beta: (λx.x y) -> y
+Eta:  λx. (f x) -> f
 
 --
 Booleans in Lambda Calculus
@@ -61,14 +79,6 @@ Code Example (JavaScript):
 const ZERO = f => x => x;
 const ONE = f => x => f(x);
 const TWO = f => x => f(f(x));
-
---
-What is Eta Reduction?
-- Simplifying functions by removing redundant abstractions
-Rule: λx. (f x) ≡ f
-Example:
-λx. (f x) reduces to f
-
 
 --
 Combinators
