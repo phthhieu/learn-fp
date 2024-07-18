@@ -1,0 +1,36 @@
+def I = \x.x
+
+def SA = \f.(f f)
+
+def A = \f.\x.(f x)
+
+def Sel1 = \first.\second.first
+
+def Sel2 = \first.\second.second
+
+def MakePair = \e1.\e2.\f.((f e1) e2)
+
+// <condition>?<expression>:<expression>
+// max = x>y?x:y
+// absx = x<0?—x:x
+//
+
+// Not: True -> False
+//      False -> True
+
+// And:
+// <operand> AND <operand>
+// Note that if the left operand is TRUE,
+// then the final value depends on the right operand
+// and if the left operand is FALSE, then the final value is FALSE
+// so AND could be modelled using the conditional expression as:
+// X ? Y: FALSE
+
+// Or:
+// <operand> OR <operand>
+// Note that if the first operand is TRUE,
+// then the final value is TRUE,
+// otherwise the final value is the second operand.
+// We could describe this using the conditional expression as:
+// X ? TRUE : Y
+//
