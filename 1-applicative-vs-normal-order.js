@@ -31,3 +31,7 @@ const lazyAdd = (xThunk, yThunk) => {
 const result = lazyAdd(lazy(1), lazy(2));
 
 console.log(result);
+
+// Ref
+// https://github.com/reduxjs/redux-thunk/blob/master/src/index.ts
+// https://en.wikipedia.org/wiki/Thunk
