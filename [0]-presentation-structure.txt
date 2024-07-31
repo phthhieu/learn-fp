@@ -45,7 +45,7 @@ In JS, x is local var, while y is captured from a closure.
 --
 Reduction in Lambda Calculus
 - Alpha Reduction: Renaming bound variables
-- Beta Reduction: Applying functions to arguments
+- Beta Reduction: Applying arguments to functions
 - Eta Reduction: Simplifying functions by removing redundant abstractions
 
 Examples:
@@ -54,6 +54,11 @@ Beta: (λx.x y) -> y
 Eta:  λx. (f x) -> f
 
 --
+
+
+
+---> Move to 2
+
 Booleans in Lambda Calculus
 - True: λx.λy.x
 - False: λx.λy.y

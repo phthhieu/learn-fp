@@ -1,0 +1,8 @@
+# Present plan 1st Aug 2024
+
+0. Review FP https://excalidraw.com/
+1. Introduction to Lambda calculus https://excalidraw.com/
+2. Basic lambda calculus: [0]-presentation-structure.txt
+3. Live demo:
+   - live-demo.js / NodeCLI
+   - Ref: 2-lamda-calculus.js, [2]-lambda-calculus-present-note.txt
