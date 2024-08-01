@@ -6,3 +6,4 @@
 3. Live demo:
    - live-demo.js / NodeCLI
    - Ref: 2-lamda-calculus.js, [2]-lambda-calculus-present-note.txt
+4. Minigame https://app.sli.do/event/cWzpihFqwADRGXbMghtxEw
