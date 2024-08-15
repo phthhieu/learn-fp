@@ -1,0 +1,29 @@
+Identity Combinator (I):
+I=λx.x
+
+The identity combinator simply returns its argument unchanged.
+
+Fixed-point Combinator (Y or Θ):
+The fixed-point combinator allows for the creation of recursive functions in lambda calculus. The Y combinator is defined as:
+Y=λf.(λx.f(xx))(λx.f(xx))
+It allows for recursion by applying a function to itself.
+
+Mockingbird Combinator (M):
+M=λf.ff
+The mockingbird combinator applies a function to itself.
+
+K Combinator:
+K=λxy.x
+The K combinator (also known as the Kestrel) takes two arguments and returns the first one, ignoring the second.
+
+S Combinator:
+S=λxyz.(xz)(yz)
+The S combinator (also known as the Starling) is used to apply two functions to the same argument.
+
+B Combinator:
+B=λxyz.x(yz)
+The B combinator (also known as the Bluebird) applies the first function to the result of applying the second function to the third argument.
+
+C Combinator:
+C=λxyz.xzy
+The C combinator (also known as the Cardinal) is used for flipping the order of the last two arguments.
